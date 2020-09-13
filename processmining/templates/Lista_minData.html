@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TFG</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome5-overrides.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.min.css' %}">
+</head>
+
+<body>
+     <nav class="navbar navbar-dark navbar-expand-md bg-dark d-block navigation-clean" style="width:110%;">
+        <div class="container"><a class="navbar-brand" href="#">Bienvenido , {{ request.session.name }}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <div class="col"><i class="fa fa-power-off" style="margin: 10px ;"></i><a href="/processmining/desconexion">  ¿ Desconexión ? </a></div>
+                <ul class="nav navbar-nav ml-auto" style="width: 50%;">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/processmining/listaProcedimientos">Procedimientos</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/processmining/listaDeActividades">Actividades</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/processmining/listaDeRecursos">Recursos</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link " href='/processmining/listaDePacientes' >Pacientes</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href='/processmining/listaLogs'>Logs de pacientes</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href='/processmining/listaminData'>Minería de datos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <!-- End: Navigation Dark Clean -->
+    <!-- Start: 2 Rows 1+1 Columns -->
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><<iframe width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=91a7e54f-51fa-48f5-9de9-6fd4a058c424&autoAuth=true&ctid=3f227dba-f3f4-4544-b314-c6efd30e0d00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="1" allowFullScreen="true"></iframe></div>
+                <br>
+            </div>
+            <div class="row" style="margin-left: -1px;margin-right: -1px;">
+                <div class="col-md-12" style="text-align: center;">
+                    <br>
+                    <div class="btn-group" role="group" style="margin-left: 0px;text-align: center;"><a class="btn btn-primary" href="{% static 'datamining/informe_medico.pdf' %}">Descargar PDF del informe</a><a class="btn btn-primary" href="{% static 'datamining/informe.pbix' %}">Descargar archivo para PowerBI</a><a class="btn btn-primary" href="https://app.powerbi.com/groups/me/reports/91a7e54f-51fa-48f5-9de9-6fd4a058c424/ReportSectioncaa03d0827c5dfe571b6?ctid=3f227dba-f3f4-4544-b314-c6efd30e0d00">Ver online </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: 2 Rows 1+1 Columns -->
+    <!-- Start: 2 Rows 1+1 Columns -->
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><img src="{% static 'assets/img/Medical%20Graph.jpg' %}" style="width: 100%;"></div>
+            </div>
+            <div class="row">
+                <div class="col" style="text-align: center;"><a class="btn btn-primary" href="{% static 'datamining/AFD.pdf' %}">Descargar autómata completo </a><a class="btn btn-primary" href="{% static 'datamining/AFD_max.pdf' %}">Descargar camino de probabilidad máxima </a>
+                <div class="col" style="text-align: center;"><a class="btn btn-primary" href="{% static 'datamining/cpn_protesiscadera.cpn' %}">Descargar Red de Petri coloreada CPN Tools </a><a class="btn btn-primary" href="{% static 'datamining/AFD_min.pdf' %}">Descargar camino de probabilidad minima </a>
+            </div>
+        </div>
+    </div>
+            </div>
+        <row><br><br></row>
+ <footer class="bg-dark text-white border-top border-info">
+        <!-- Start: Footer 1 -->
+        <div class="container text-center text-sm-left position-relative py-5">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="text-info pb-2 border-bottom border-info" style="text-align: center;">Hospital Clínico Universitario Lozano Blesa</h3>
+                            <p style="font-family: Actor, sans-serif;text-align: justify;font-size: 13px;">Trabajo de Final de Grado de ingeniería informática de David Ubide en la especialidad de sistemas de la información
+                                coloborando con el Hospital Clínico Universitario Lozano Blesa</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="text-align: center;"><img style="text-align: center;width: 100px;" src="{% static 'assets/img/by-nc.png' %}"></div>
+                    </div>
+                </div>
+                <div class="col" style="text-align: center;"><img src="{% static 'assets/img/logo_sas.png' %}" style="width: 374px;text-align: right;"></div>
+            </div>
+        </div>
+        <!-- End: Footer 1 -->
+        <!-- Start: Copyright -->
+        <div class="text-center text-lg-left py-2 small bg-dark text-info font-italic">
+            <div class="container">
+                <p class="m-0">2020 - Escuela de Ingeniería y Arquitectura - Universidad de Zaragoza</p>
+            </div>
+        </div>
+        <!-- End: Copyright -->
+
+    </footer>
+     <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

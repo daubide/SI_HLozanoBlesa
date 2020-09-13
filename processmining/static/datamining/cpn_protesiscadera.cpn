@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE workspaceElements PUBLIC "-//CPN//DTD CPNXML 1.0//EN" "http://cpntoold.org/DTD/6/cpn.dtd">
+<workspaceElements>
+<generator tool="CPN Tools" version="4.0.1" format="6"/>
+<cpnet>
+<globbox>
+<block>
+<id>Standard priorities</id>
+<ml>val P_HIGH = 100;
+<layout>val P_HIGH = 100;</layout>
+</ml>
+<ml>val P_NORMAL = 1000;
+<layout>val P_NORMAL = 1000;</layout>
+</ml>
+<ml>val P_LOW = 10000;
+<layout>val P_LOW = 10000;</layout>
+</ml>
+</block>
+<block>
+<id>Declarations</id>
+<color>
+<id>paciente</id>
+<string/>
+<layout>colset paciente = string;</layout></color>
+<color>
+<id>Medico</id>
+<string/>
+<layout>colset Medico = string;</layout></color>
+<color>
+<id>Enfermera</id>
+<string/>
+<layout>colset Enfermera = string;</layout></color>
+<color>
+<id>RecursoFarmaceutico</id>
+<string/>
+<layout>colset RecursoFarmaceutico = string;</layout></color>
+<color>
+<id>Celador</id>
+<string/>
+<layout>colset Celador = string;</layout></color>
+<color>
+<id>Cama</id>
+<string/>
+<layout>colset Cama = string;</layout></color>
+<color>
+<id>MaquinaRX</id>
+<string/>
+<layout>colset MaquinaRX = string;</layout></color>
+<color>
+<id>pacienteEnfermeraRecursoFarmaceutico</id>
+<product>
+<id>Enfermera</id>
+<id>RecursoFarmaceutico</id>
+<id>paciente</id>
+</product>
+<layout>colset pacienteEnfermeraRecursoFarmaceutico = product  Enfermera * RecursoFarmaceutico * paciente</layout> 
+</color>
+<color>
+<id>pacienteCeladorMaquinaRX</id>
+<product>
+<id>Celador</id>
+<id>MaquinaRX</id>
+<id>paciente</id>
+</product>
+<layout>colset pacienteCeladorMaquinaRX = product  Celador * MaquinaRX * paciente</layout> 
+</color>
+<color>
+<id>pacienteCelador</id>
+<product>
+<id>Celador</id>
+<id>paciente</id>
+</product>
+<layout>colset pacienteCelador = product  Celador * paciente</layout> 
+</color>
+<color>
+<id>pacienteMedico</id>
+<product>
+<id>Medico</id>
+<id>paciente</id>
+</product>
+<layout>colset pacienteMedico = product  Medico * paciente</layout> 
+</color>
+<var>
+<type>
+<id>paciente</id>
+</type>
+<id>paciente</id>
+<layout>var paciente : paciente;</layout>
+</var>
+<var>
+<type>
+<id>Medico</id>
+</type>
+<id>Medico</id>
+<layout>var Medico : Medico;</layout>
+</var>
+<var>
+<type>
+<id>Enfermera</id>
+</type>
+<id>Enfermera</id>
+<layout>var Enfermera : Enfermera;</layout>
+</var>
+<var>
+<type>
+<id>RecursoFarmaceutico</id>
+</type>
+<id>RecursoFarmaceutico</id>
+<layout>var RecursoFarmaceutico : RecursoFarmaceutico;</layout>
+</var>
+<var>
+<type>
+<id>Celador</id>
+</type>
+<id>Celador</id>
+<layout>var Celador : Celador;</layout>
+</var>
+<var>
+<type>
+<id>Cama</id>
+</type>
+<id>Cama</id>
+<layout>var Cama : Cama;</layout>
+</var>
+<var>
+<type>
+<id>MaquinaRX</id>
+</type>
+<id>MaquinaRX</id>
+<layout>var MaquinaRX : MaquinaRX;</layout>
+</var>
+</block>
+</globbox>
+<page id="ID48">
+<pageattr name="Net"/>
+<place id="ID1">
+<text>Medico</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID2">
+<text>Enfermera</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID3">
+<text>RecursoFarmaceutico</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID4">
+<text>Celador</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID5">
+<text>Cama</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID6">
+<text>MaquinaRX</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID7">
+<text></text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID8">
+<text>Antibiotico</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteEnfermeraRecursoFarmaceutico</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID9">
+<text>Heparina</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteEnfermeraRecursoFarmaceutico</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID10">
+<text>Analitica</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteEnfermeraRecursoFarmaceutico</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID11">
+<text>RX</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteCeladorMaquinaRX</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID12">
+<text>Sedestacion</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteCelador</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID13">
+<text>MomentoretirarRedon</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteEnfermeraRecursoFarmaceutico</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID14">
+<text>CurarHerida</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteEnfermeraRecursoFarmaceutico</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID15">
+<text>Empezaracaminar</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteCelador</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID16">
+<text>Reposo4</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID17">
+<text>Alta</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">pacienteMedico</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID18">
+<text>Reposo3</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID19">
+<text>Reposo5</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<place id="ID20">
+<text>Reposo6</text>
+<ellipse w="60.0" h="40.0"/>
+<type>
+<posattr x="50.0" y="-23.0"/>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</type>
+<initmark>
+<posattr x="40.0" y="23.0"/>
+<text tool="CPN Tools" version="4.0.1"/>
+</initmark>
+</place>
+<trans id="ID21" explicit="false">
+<text>Antibiotico</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID22" explicit="false">
+<text>AntibioticoHeparina</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID23" explicit="false">
+<text>HeparinaAnalitica</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID24" explicit="false">
+<text>AnaliticaRX</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID25" explicit="false">
+<text>RXSedestacion</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID26" explicit="false">
+<text>SedestacionMomentoretirarRedon</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID27" explicit="false">
+<text>MomentoretirarRedonCurarHerida</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID28" explicit="false">
+<text>CurarHeridaEmpezaracaminar</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID29" explicit="false">
+<text>EmpezaracaminarReposo4</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID30" explicit="false">
+<text>Reposo4Alta</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID31" explicit="false">
+<text>EmpezaracaminarAlta</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID32" explicit="false">
+<text>EmpezaracaminarReposo3</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID33" explicit="false">
+<text>Reposo3Alta</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID34" explicit="false">
+<text>MomentoretirarRedonEmpezaracaminar</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID35" explicit="false">
+<text>Reposo3Reposo4</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID36" explicit="false">
+<text>SedestacionEmpezaracaminar</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID37" explicit="false">
+<text>EmpezaracaminarMomentoretirarRedon</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID38" explicit="false">
+<text>CurarHeridaReposo3</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID39" explicit="false">
+<text>AnaliticaSedestacion</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID40" explicit="false">
+<text>EmpezaracaminarRX</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID41" explicit="false">
+<text>RXAlta</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID42" explicit="false">
+<text>Reposo4Reposo5</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID43" explicit="false">
+<text>Reposo5Alta</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID44" explicit="false">
+<text>Reposo3Empezaracaminar</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID45" explicit="false">
+<text>Reposo5Reposo6</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID46" explicit="false">
+<text>Reposo6Alta</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<trans id="ID47" explicit="false">
+<text>Reposo6</text>
+<box w="60.0" h="40.0"/>
+</trans>
+<arc orientation="PtoT" order="1">
+<transend idref="ID21"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID21"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID21"/>
+<placeend idref="ID7"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID21"/>
+<placeend idref="ID8"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID22"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID22"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID22"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID22"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID22"/>
+<placeend idref="ID8"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID22"/>
+<placeend idref="ID9"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID23"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID23"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID23"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID23"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID23"/>
+<placeend idref="ID9"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID23"/>
+<placeend idref="ID10"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID24"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID24"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID24"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID24"/>
+<placeend idref="ID6"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">MaquinaRX</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID24"/>
+<placeend idref="ID10"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID24"/>
+<placeend idref="ID11"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,MaquinaRX,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID25"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID25"/>
+<placeend idref="ID6"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">MaquinaRX</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID25"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID25"/>
+<placeend idref="ID11"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,MaquinaRX,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID25"/>
+<placeend idref="ID12"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID26"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID26"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID26"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID26"/>
+<placeend idref="ID12"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID26"/>
+<placeend idref="ID13"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID27"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID27"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID27"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID27"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID27"/>
+<placeend idref="ID13"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID27"/>
+<placeend idref="ID14"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID28"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID28"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID28"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID28"/>
+<placeend idref="ID14"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID28"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID29"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID29"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID29"/>
+<placeend idref="ID16"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID30"/>
+<placeend idref="ID1"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Medico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID30"/>
+<placeend idref="ID16"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID30"/>
+<placeend idref="ID17"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Medico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID31"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID31"/>
+<placeend idref="ID1"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Medico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID31"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID31"/>
+<placeend idref="ID17"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Medico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID32"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID32"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID32"/>
+<placeend idref="ID18"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID33"/>
+<placeend idref="ID1"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Medico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID33"/>
+<placeend idref="ID18"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID33"/>
+<placeend idref="ID17"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Medico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID34"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID34"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID34"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID34"/>
+<placeend idref="ID13"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID34"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID35"/>
+<placeend idref="ID18"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID35"/>
+<placeend idref="ID16"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID36"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID36"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID36"/>
+<placeend idref="ID12"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID36"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID37"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID37"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID37"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID37"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID37"/>
+<placeend idref="ID13"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID38"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID38"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID38"/>
+<placeend idref="ID14"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID38"/>
+<placeend idref="ID18"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID39"/>
+<placeend idref="ID2"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Enfermera</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID39"/>
+<placeend idref="ID3"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">RecursoFarmaceutico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID39"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID39"/>
+<placeend idref="ID10"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Enfermera,RecursoFarmaceutico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID39"/>
+<placeend idref="ID12"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID40"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID40"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID40"/>
+<placeend idref="ID6"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">MaquinaRX</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID40"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID40"/>
+<placeend idref="ID11"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,MaquinaRX,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID41"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID41"/>
+<placeend idref="ID6"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">MaquinaRX</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID41"/>
+<placeend idref="ID1"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Medico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID41"/>
+<placeend idref="ID11"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,MaquinaRX,paciente)</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID41"/>
+<placeend idref="ID17"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Medico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID42"/>
+<placeend idref="ID16"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID42"/>
+<placeend idref="ID19"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID43"/>
+<placeend idref="ID1"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Medico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID43"/>
+<placeend idref="ID19"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID43"/>
+<placeend idref="ID17"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Medico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID44"/>
+<placeend idref="ID4"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Celador</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID44"/>
+<placeend idref="ID18"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID44"/>
+<placeend idref="ID15"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Celador,paciente)</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID45"/>
+<placeend idref="ID19"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID45"/>
+<placeend idref="ID20"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID46"/>
+<placeend idref="ID1"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">Medico</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID46"/>
+<placeend idref="ID20"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID46"/>
+<placeend idref="ID17"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">(Medico,paciente)</text>
+</annot>
+</arc>
+<arc orientation="PtoT" order="1">
+<transend idref="ID47"/>
+<placeend idref="ID20"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+<arc orientation="TtoP" order="1">
+<transend idref="ID47"/>
+<placeend idref="ID7"/>
+<annot>
+<text tool="CPN Tools" version="4.0.1">paciente</text>
+</annot>
+</arc>
+</page>
+<instances>
+<instance id="ID49" page="ID48"/>
+</instances>
+<binders>
+<cpnbinder id="ID50" x="257" y="122" width="600" height="400">
+<sheets>
+<cpnsheet id="ID51" panx="-6.0" pany="-5.0" zoom="1.0" instance="ID49">
+<zorder>
+<position value="0"/>
+</zorder>
+</cpnsheet>
+</sheets>
+<zorder>
+<position value="0"/>
+</zorder>
+</cpnbinder>
+</binders>
+<monitorblock name="Monitors"/>
+</cpnet>
+</workspaceElements>
